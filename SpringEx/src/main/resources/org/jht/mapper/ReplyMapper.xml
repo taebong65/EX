@@ -14,8 +14,19 @@
 		select * from reply where rno=#{rno}
 	</select>
 	
+	<update id ="update">
+		update reply 
+		set reply=#{reply}
+		,replydate=now()
+		where rno=#{rno};
+
+
+	</update>
 	
-	
+	<delete id="remove">
+      delete from reply
+      where rno=#{rno};
+  	 </delete>
 	
 	
 	

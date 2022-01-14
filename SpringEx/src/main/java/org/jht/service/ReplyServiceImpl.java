@@ -25,4 +25,13 @@ public class ReplyServiceImpl implements ReplyService {
 		return rmapper.detail(rno);
 	}
 	
+	// 댓글 수정 설계된 것을 구현
+	public int update(ReplyDTO rdto) {
+		return rmapper.update(rdto);
+	}
+	
+	//댓글 삭제 설계된것을 구현
+	public int remove(ReplyDTO rdto) {
+		return rmapper.remove(rdto);
+	}
 }

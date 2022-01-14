@@ -60,19 +60,24 @@
                                             <h4 class="modal-title" id="myModalLabel">댓글</h4>
                                         </div>
                                         <div class="modal-body">
+                                        
+                                        <div>
+                                        		<label>Rno</label>
+   												<input type="text" name="rno"  class="form=control">                                  
+                                        </div>
                                         	<div>
                                             	<label>Replyer</label>
-                                            	<input type="text" name="replyer">
+                                            	<input type="text" name="replyer" class="form=control">
                                             </div>
                                             <div>
                                             	<label>Reply</label>
-                                            	<input type="text" name="reply">
+                                            	<input type="text" name="reply" class="form=control">
                                             </div>
                                         </div>
                                         <div class="modal-footer">
                                         	<button type="button" id="modalRegisterBtn" class="btn btn-primary">댓글쓰기</button>
-                                            <button type="button" class="btn btn-primary">댓글수정</button>
-                                            <button type="button" class="btn btn-primary">댓글삭제</button>
+                                            <button type="button"  id="modalModBtn" class="btn btn-primary">댓글수정</button>
+                                            <button type="button"  id="modalRemoveBtn"class="btn btn-primary">댓글삭제</button>
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                         </div>
                                     </div>

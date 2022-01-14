@@ -13,5 +13,13 @@ public interface ReplyMapper {
 	
 	public ArrayList<ReplyDTO> list(int bno);
 	public ReplyDTO detail(int rno);
+	
+	public int update(ReplyDTO rdto);
 
+
+	//댓글 삭제 설계
+	//delete성공시 ReplyMapper.xml로 부터 1
+	//delete실패시 ReplyMapper.xml로 부터 0
+	//값을 리턴받는다
+	public int remove(ReplyDTO rdto);
 }
