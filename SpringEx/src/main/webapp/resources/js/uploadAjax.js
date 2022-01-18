@@ -55,7 +55,7 @@ $(document).ready(function(){
          contentType:false,
          success:function(result){
             //이게 실행될려면 ReplyController에 HttpSt ok가 실행될때 실행된다
-            alert("upload성공");
+            console.log(result);
          },   // 통신이 정상적으로 성공했으면
            error:function(){
                
