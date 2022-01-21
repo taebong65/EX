@@ -106,6 +106,50 @@ var replyService=(function(){ //함수선언
       };
       
 })()
+$(document).ready(function(){
+	//bno값 출력하기
+	   var bno=$("#bno").html();
+
+	
+	//상세페이지가 시작되자마자 이미지를 출력하기 위한 ajax
+	$.getJSON("/board/fileList/"+bno+".json",
+	         function(data){ //BoardController에 있는 fileList를 통해 얻어진 select결과를 data에 저장한 후 
+					//detail.jsp에 뿌리기
+			console.log(data)
+			var str="";
+			$(data).each(function(i,obj){
+				
+				   $(uploadresultArr).each(function(i,obj){
+					   console.log(obj);
+					  
+
+					 if(!obj.image){				//사용자가 업로드 한 파일의 타입이 이미지가 아니면(엑셀문서파일,피피티 파일)
+						 var fileCallPath = encodeURIComponent(obj.uploadPath + "/" + obj.uuid + "_" + obj.fileName)
+						// str+="<li><img src='/resources/img/attach.png'>"+obh.fileName+"</li>" 
+						  str+="<li><a href='download?fileName="+fileCallPath+"'>"+obj.fileName+"</a></li>"
+					 } else{			//사용자가 업로드 한 파일의 타입이 이미지 이면(.jpg, .png,.gif)
+						 var fileCallPath=encodeURIComponent(obj.uploadPath+"/s_"+obj.uuid+"_"+obj.fileName)
+//						 str+="<li data-path='"+obj.uploadPath+"'";
+//						 str+="data-uuid='"+obj.uuid+"' data-filename='"+obj.fileName+"' data-type='"+obj.image+"'>";
+//						 str+="<img src='/display?fileName="+fileCallPath+"'></li>";
+						 // str+="<li><img src='"+obj.uploadPath+"/s_"+obj.uuid+"_"+obj.fileName+"'></li>"
+						 console.log(fileCallPath);
+						 //img태그를 사용해서 웹브라우저 이미지 출력....
+						 str+="<li data-path='"+obj.uploadPath+"'";
+						 str+="data-uuid='"+obj.uuid+"' data-filename='"+obj.fileName+"' data-type='"+obj.image+"'>";
+						 str+="<img src='/display?fileName="+fileCallPath+"'></li>"
+					 } 			
+					  
+					   			
+					 
+				   })
+			   
+				   $("#uploadResult ul").html(str)
+				})
+			
+	})
+})
+
 
 
 
@@ -138,8 +182,7 @@ $(document).ready(function(){
    
    
    
-   //bno값 출력하기
-   var bno=$("#bno").html();
+   
    
    //게시판에 댓글 상시 출력
    showList();

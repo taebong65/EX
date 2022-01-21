@@ -8,6 +8,11 @@ public class AttachFileDTO {
 	private String uploadPath;
 	private String uuid;
 	private boolean image;
+	public int getBno() {
+		return bno;
+	}
+	private int bno;
+	
 	
 	public String getFileName() {
 		return fileName;
@@ -37,7 +42,11 @@ public class AttachFileDTO {
 	@Override
 	public String toString() {
 		return "AttachFileDTO [fileName=" + fileName + ", uploadPath=" + uploadPath + ", uuid=" + uuid + ", image="
-				+ image + "]";
+				+ image + ", bno=" + bno + "]";
+	}
+	public void setBno(int bno) {
+		
+		
 	}
 
 }

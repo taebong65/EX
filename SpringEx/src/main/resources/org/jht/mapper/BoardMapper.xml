@@ -7,6 +7,20 @@
 		insert into board(title,content,writer,regdate)
 		values(#{title},#{content},#{writer},now())
 	</insert>
+	
+	<!-- board테이블에 insert하기전에 bno값을 미리 만들어 놓고 insert를 해야함  -->
+	<insert id="insertSelectKey">
+		<selectKey keyProperty="bno" order="BEFORE" resultType="int">
+		select max(bno)+1 bno from board;
+		 
+		</selectKey>
+		insert into board(bno,title,content, writer)
+         values(#{bno},#{title},#{content},#{writer})
+	
+	
+	</insert>
+	
+	
 	<select id="list" resultType="org.jht.domain.BoardDTO">
 		select *
 		from(

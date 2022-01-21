@@ -17,6 +17,10 @@
 </head>
 <body>
 	<h1>게시판 목록 리스트</h1>
+	
+	<c:if test="${login!=null}">
+		<div class="form-control bg-light border-0 small"><a href="/board/write"  class="page-link">글쓰기</a></div>
+	</c:if>
 	<div class="card-body">
        <div class="table-responsive">
            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -45,8 +49,8 @@
            </table>
            <form id="actionForm" action="/board/list" method="get">
            <div class="form-control bg-light border-0 small">
-           		<input type="text" name="pageNum" value="${pageMaker.cri.pageNum}">
-           		<input type="text" name="amount" value="${pageMaker.cri.amount}">
+           		<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
+           		<input type="hidden" name="amount" value="${pageMaker.cri.amount}">
 	           <select name="search">
 	           		<option value="T">제목</option>
 	           		<option value="C">내용</option>

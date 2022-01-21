@@ -108,10 +108,10 @@ $(document).ready(function(){
 		var str="";
 	   $(uploadresultArr).each(function(i,obj){
 		   console.log(obj);
-		   var fileCallPath = encodeURIComponent(obj.uploadPath + "/" + obj.uuid + "_" + obj.fileName)
+		  
 
 		 if(!obj.image){				//사용자가 업로드 한 파일의 타입이 이미지가 아니면(엑셀문서파일,피피티 파일)
-			 
+			 var fileCallPath = encodeURIComponent(obj.uploadPath + "/" + obj.uuid + "_" + obj.fileName)
 			// str+="<li><img src='/resources/img/attach.png'>"+obh.fileName+"</li>" 
 			  str+="<li><a href='download?fileName="+fileCallPath+"'>"+obj.fileName+"</a></li>"
 		 } else{			//사용자가 업로드 한 파일의 타입이 이미지 이면(.jpg, .png,.gif)
