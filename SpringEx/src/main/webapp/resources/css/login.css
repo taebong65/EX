@@ -17,11 +17,14 @@
     position: relative;
     right: -30px;
     top: 40px;
-    background-image: url(/resources/img/logo_m.png);
+    /*background-image: url(/resources/img/logo_m.png);
     background-repeat: no-repeat;
     background-size: 58px;
-    text-indent: -999999px;
+    text-indent: -999999px; */
 
+}
+.homeback img{
+	 width: 58px;
 }
 
 

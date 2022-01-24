@@ -13,9 +13,9 @@
 
 <body>
 
-    <div id="wrap">
+    <div id="wrap"> 
     	<div class="homeback">
-            <a href="">Osulloc</a>
+            <a href="/"><img src="/resources/img/logo_m.png"></a>
         </div>
     
         <div class="headerBox">
@@ -41,6 +41,7 @@
          </form>
     
      
+                                              
 
 
         <labe class="id_saved"> <input type="checkbox">아이디 저장</labe>
@@ -78,7 +79,7 @@
         <button class="join_membership">
             <span>아직 회원이 아니세요?</span>
             <em>
-                회원가입
+                	회원가입
             </em>
             <span class="arrow">
 

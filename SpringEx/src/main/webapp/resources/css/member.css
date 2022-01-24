@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+
+
+*{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+#wrap{
+
+    width: 1240px;
+
+}
+
+
+
+#header h1 {
+    line-height: 54px;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 1px solid #252525 ;
+    margin-bottom: 20px;
+}
+
+
+
+.topArea {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.topArea h2{
+    margin-bottom: 10px;
+}
+.topArea p{
+    font-weight: bold;
+}
+
+
+
+
+.inputForm,.idInput,.pwInput,.pwConfirm,.confirm{
+    text-align: center;
+}
+.name{ 
+   
+    padding: 0 12px;
+    width: 480px;
+    height: 50px;
+    line-height: 48px;
+    color: #252525;
+    font-size: 14px;
+    letter-spacing: -0.7px;
+    border: 1pxsolid #e6e6e6;
+    border-radius: 6px;
+    /* position: relative;
+    top: 0;
+    right: -300px; */
+    margin-bottom: 20px;
+  
+}
+#id,#pw,#pwc{
+    padding: 0 12px;
+    width: 480px;
+    height: 50px;
+    line-height: 48px;
+    color: #252525;
+    font-size: 14px;
+    letter-spacing: -0.7px;
+    border: 1pxsolid #e6e6e6;
+    border-radius: 6px;
+    /* position: relative;
+    top: 0;
+    right: -300px; */
+    margin-bottom: 20px;
+}
+
+ .regist{
+    width: 512px;
+    height: 50px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+    background-color: #1BBC9B;
+    color: #252525;
+ }
+
+
+
+

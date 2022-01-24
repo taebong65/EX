@@ -3,73 +3,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="../resources/css/styles.css" rel="stylesheet" />
+<link href="../resources/css/member.css" rel="stylesheet" />
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../resources/js/member.js"></script>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+
+    <title>회원가입</title>
+
 </head>
 <body>
-<div id="layoutAuthentication">
-            <div id="layoutAuthentication_content">
-                <main>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-7">
-                                <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
-                                    <div class="card-body">
-                                        <form action="/member/member" method="post">
-                                            <div class="form-floating mb-3">
-                                                <input name="name" class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
-                                                <label for="inputFirstName">name</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input name="id" class="form-control" id="inputEmail" type="text" placeholder="name@example.com" />
-                                                <label for="inputEmail">Email address</label>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                        <input name="password" class="form-control" id="inputPassword" type="password" placeholder="Create a password" />
-                                                        <label for="inputPassword">Password</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputPasswordConfirm" type="password" placeholder="Confirm password" />
-                                                        <label for="inputPasswordConfirm">Confirm Password</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mt-4 mb-0">
-                                                <div class="d-grid">
-                                                	<input type="submit" class="btn btn-primary btn-block" value="Create Account">
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="card-footer text-center py-3">
-                                        <div class="small"><a href="login.html">Have an account? Go to login</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
+    <div id="#wrap">
+        <header id="header">
+            
+                <h1 class="page_tit">회원 가입</h1>
+               
+            
+
+        </header>
+
+        <div id="container">
+
+            <div class="topArea">
+
+                <h2 > 오설록에 오신것을 환영합니다. </h2>
+                <p>오설록 회원가입을 위해서 아이디와 비밀번호를 입력해주세요 </p>
+
+
             </div>
-            <div id="layoutAuthentication_footer">
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+            
+            
+           <form action="/member/member" method="post" id="target">
+           
+            <div class="inputForm">
+                <input type="text" class="name" id="name" placeholder="이름을 입력해주세요">
+                
             </div>
-        </div>
+            <div class="idInput">
+                <label id="idmsg"></label>
+                <br>
+                <input name="id"   id="id" placeholder="아이디(영문 또는 숫자)">
+            </div>
+
+            <div class="pwInput">
+                <label id="pwmsg"></label>
+                <br>
+                <input name="password" id="pw" type="password" placeholder="비밀번호(영문 소문자.숫자,특수문자 조합)">
+
+            </div>
+            <div class="pwConfirm">
+                <label id="pwmsg2"></label>
+                <br>
+                <input type="password" id="pwc" placeholder="비밀번호 확인 ">
+            </div>
+
+            
+            <div class="confirm">
+                <input type="submit"  class="regist" value="회원가입 ">
+            </div>
+        </form>
+    </div><!--#container-->
+</div><!--#wrap-->
 </body>
+	
+
 </html>
