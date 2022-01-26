@@ -1,7 +1,7 @@
 package org.jht.controller;
 
 import javax.servlet.http.HttpSession;
-import javax.swing.plaf.synth.SynthSeparatorUI;
+//import javax.swing.plaf.synth.SynthSeparatorUI;
 
 import org.jht.domain.MemberDTO;
 import org.jht.service.MemberService;
@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 
 @Controller
 @RequestMapping("member")
@@ -20,7 +21,7 @@ public class MemberController {
 	
 	@GetMapping("member")
 	public void write() {
-		System.out.println("board/write");
+		System.out.println("member/member");
 	} 
 	@PostMapping("member")
 	public void Postmember(MemberDTO mdto) {
@@ -62,4 +63,6 @@ public class MemberController {
 		
 		
 	}
+	
+	
 }

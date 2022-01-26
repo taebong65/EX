@@ -5,7 +5,7 @@
 <head>
 <link href="../resources/css/member.css" rel="stylesheet" />
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="../resources/js/member.js"></script>
+<script src="../resources/js/member1.js"></script>
 <meta charset="UTF-8">
 
     <title>회원가입</title>
@@ -35,23 +35,26 @@
            <form action="/member/member" method="post" id="target">
            
             <div class="inputForm">
-                <input type="text" class="name" id="name" placeholder="이름을 입력해주세요">
+                <input type="text" class="name" name="Name" id="name" placeholder="이름을 입력해주세요">
                 
             </div>
             <div class="idInput">
                 <label id="idmsg"></label>
                 <br>
-                <input name="id"   id="id" placeholder="아이디(영문 또는 숫자)">
+                <input type="text"  name="id"   id="id" placeholder="아이디(영문 또는 숫자)">
+               
             </div>
+   
+            
 
             <div class="pwInput">
-                <label id="pwmsg"></label>
+                
                 <br>
                 <input name="password" id="pw" type="password" placeholder="비밀번호(영문 소문자.숫자,특수문자 조합)">
 
             </div>
             <div class="pwConfirm">
-                <label id="pwmsg2"></label>
+               
                 <br>
                 <input type="password" id="pwc" placeholder="비밀번호 확인 ">
             </div>

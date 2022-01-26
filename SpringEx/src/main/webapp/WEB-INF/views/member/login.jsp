@@ -76,7 +76,7 @@
         </ul>
 
         
-        <button class="join_membership">
+        <button class="join_membership" onclick = "location.href = '/member/member' ">
             <span>아직 회원이 아니세요?</span>
             <em>
                 	회원가입
