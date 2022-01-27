@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오설록 로그인</title>
 <link rel="stylesheet" href="../resources/css/login.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../resources/js/login.js"></script>
 </head>
 
 
@@ -44,7 +46,7 @@
                                               
 
 
-        <labe class="id_saved"> <input type="checkbox">아이디 저장</labe>
+        <!--  <label class="id_saved"> <input type="checkbox">아이디 저장</label>-->
 
           <ul class="etc_login">
             <li>
